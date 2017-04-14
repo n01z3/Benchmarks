@@ -136,6 +136,9 @@ def train(net_type, num_gpu=1, batch=BATCH_SIZE):
 
 
 if __name__ == '__main__':
+    if not os.path.exists('tmp'):
+        os.makedirs('tmp')
+
     parser = argparse.ArgumentParser()
     parser.add_argument('--n', type=int)
     parser.add_argument('--net', type=str)
